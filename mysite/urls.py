@@ -16,7 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 
+
+app_name = 'root'
 urlpatterns = [
-    path('polls/', include('polls.urls')),
+    path('polls/', include('polls.urls'), name='polls_app'),
+    # path('todo/', include('todo.urls'), name='todo_app'),
+    # path('blog/', include('blog.urls'), name='blog_app'),
     path('admin/', admin.site.urls),
 ]
